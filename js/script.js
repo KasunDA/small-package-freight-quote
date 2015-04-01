@@ -314,8 +314,7 @@ $(document).ready(function() {
 					//example: not in cardboard box
 					var additionalCharge = 	0;
 					packageIdsArray.forEach(function (i) {
-						//18, 19, 20 = reels of hose
-						if (i === "18" || i === "19" || i === "20") {
+						if (i === "1") {
 							additionalCharge += 9;
 							row = "<tr class='warning'><td colspan='4'><center>Warning! An additional charge of $" + additionalCharge + " was added to this shipment for package(s) not encased in cardboard.</center></td></tr>";
 						}
