@@ -72,6 +72,7 @@ In other words: it shows you how much to bill a customer for shipping packages.
 * When viewing the page normally (ending in /freightcalc/), the rates shown in the Quotes table are adjusted to with the `PERCENT_ADDITIONAL_CHARGE` and `MINIMUM_CHARGE`.
 	* To view the exact rate you are charged by the carrier(s), add "?admin=poopstick" to the end of the URL.
 	* The page will change to notify you that you are in "admin" mode.
+* You *must* use your live Easypost API key in get_quote.php to show your correct, negotiated rates with any discounts applied.
 * If you know that certain packages will set off an additional charge (oversized, not in cardboard box, etc.), you **must** manually adjust the js/script.js file to add the additional charge in.  Do so by taking the array index from `DEFAULT_PACKAGES` of the specific package and change the `if` statement to return "true" on the package's index :
 	* 
 
@@ -91,7 +92,7 @@ In other words: it shows you how much to bill a customer for shipping packages.
 	```
 
 ##Misc.
-* Bugs? Issues? File and issue.
+* Bugs? Issues? File and [issue](https://github.com/coreymgilmore/small-package-freight-quote/issues/new).
 * This project is in no way affiliated with or to Easypost.
 
 ##Packages used in this app:
