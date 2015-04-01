@@ -21,9 +21,12 @@ In other words: it shows you how much to bill a customer for shipping packages.
 ##Getting Started
 1. Create a new web directory.
 	* `mkdir -p /var/www/apps/freightcalc`
+
 2. Clone this repo into the just created directory.
 	* If you use a different directory structure, make sure to change the "require_once" paths in index.php & get_quote.php.
+
 3. Create and enable an Apache or Nginx site configuration.
+
 4. Create a file for storing your Easypost API keys.
 	* Directory: `/var/www/`
 		* **Make sure this directory is not public!**
@@ -37,6 +40,7 @@ In other words: it shows you how much to bill a customer for shipping packages.
 		$EASYPOST_LIVE_KEY = "your_easypost_live_key";
 	?>
 	```
+
 5. Set defaults.
 	* index.php
 		* `$BRANDNAME`: Your company's name.
@@ -45,6 +49,7 @@ In other words: it shows you how much to bill a customer for shipping packages.
 		* `PERCENT_ADDITIONAL_CHARGE`: The percent margin on the freight charge you want to add to cover packaging & handling expenses.
 		* `MINIMUM_CHARGE`: The lowest freight rate you want to charge a customer.
 		* `DEFAULT_PACKAGES`: A list of the common packages you ship.  This is used to populate an HTML select with options of packages so users make less mistakes with dimensions.
+		
 6. Get correct transit maps.
 	* Go to the correct website for each carrier and get the transit map from your location.
 	* Save this file to the img/ directory.
