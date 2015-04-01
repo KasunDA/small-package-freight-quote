@@ -12,13 +12,13 @@ In other words: it shows you how much to bill a customer for shipping packages.
 * Quotes from multiple carriers at one time.  Easier to compare costs.
 * Default package sizes and weights.
 
-#Requirements
+##Requirements
 * PHP.
 * PHP-curl.
 * An Easypost account.
 * Any freight carrier account that Easypost supports (i.e.: FedEx, UPS).
 
-#Getting Started
+##Getting Started
 1. Create a new web directory.
 	* `mkdir -p /var/www/apps/freightcalc`
 2. Clone this repo into the just created directory.
@@ -52,7 +52,7 @@ In other words: it shows you how much to bill a customer for shipping packages.
 	* *Based on what carriers you use, you may need to adjust the values on the buttons that show the transit map modals.*
 	* *If you are using additional carriers, simply copy & paste an existing modal's HTML and alter the modal's `id` and image's `src`.  You will also need to add another button to show this modal.*
 
-#How it Works
+##How it Works
 * Users input a "From" (if not using the default) and "To" address.
 * Next, choose a default package or type in a length, width, height, and weight.
 	* *If you are shipping more than one package, choose the "Add" or "Cycle" (clone) button to add another row.*
@@ -63,7 +63,7 @@ In other words: it shows you how much to bill a customer for shipping packages.
 * The rate returned *does not* take into account pickup fees or any other strange charges.
 
 
-#Additional Info
+##Additional Info
 * When viewing the page normally (ending in /freightcalc/), the rates shown in the Quotes table are adjusted to add the `PERCENT_ADDITIONAL_CHARGE` AND `MINIMUM_CHARGE`.
 	* To view the exact rate you are charged by the carrier(s), add "?admin=poopstick" to the end of the URL.
 	* The page will change to notify you that you are in "admin" mode.
@@ -85,11 +85,11 @@ In other words: it shows you how much to bill a customer for shipping packages.
 	});
 	```
 
-#Misc.
+##Misc.
 * Bugs? Issues? File and issue.
 * This project is in no way affiliated with or to Easypost.
 
-#Packages used in this app:
+##Packages used in this app:
 * [Easypost](www.easypost.com)
 * [jQuery](jquery.org)
 * [Bootstrap](getbootstrap.com)
