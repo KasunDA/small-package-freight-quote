@@ -13,24 +13,24 @@ In other words: it shows you how much to bill a customer for shipping packages.
 * Knowledge of setting up a PHP website.
 
 ###Getting Started
-1) Create a new directory for this webapp.
+1. Create a new directory for this webapp.
 	* `mkdir -p /var/www/apps/freightcalc`
-2) Clone this repo into the just created directory.
+2. Clone this repo into the just created directory.
 	* If you use a different directory structure, make sure to change the "require_once" paths in index.php & get_quote.php.
-3) Create and enable an Apache or Nginx site configuration to display this website.
-4) Create a file for storing your Easypost API keys.
+3. Create and enable an Apache or Nginx site configuration to display this website.
+4. Create a file for storing your Easypost API keys.
 	* Directory: `/var/www/`
 	* **Make sure this directory is not public!** Otherwise, choose a different directory and change the "require_once" path in get_quote.php as appropriate.
 	* Filename: `easypost_api_keys.php`
 	* Contents:
 
-	```php
+	```
 	<?php
 		$EASYPOST_TEST_KEY = "your_easypost_test_key";
 		$EASYPOST_LIVE_KEY = "your_easypost_live_key";
 	?>
 	```
-5) Set defaults.
+5. Set defaults.
 	* index.php
 		* `$BRANDNAME`: Your company's name.  This is just for branding the webpage.
 		* `$DEFAULT_FROM_ADDRESS`: Your shipping address.  This is assigned by default to any outgoing shipments.
@@ -38,7 +38,7 @@ In other words: it shows you how much to bill a customer for shipping packages.
 		* `PERCENT_ADDITIONAL_CHARGE`: The percent margin on the freight charge you want to add (for packaging & handling expenses).
 		* `MINIMUM_CHARGE`: The lowest freight rate you want to charge a customer.
 		* `DEFAULT_PACKAGES`: A list of the common packages you ship.  This creates a list of packages to choose from so users make less mistakes with dimensions.
-6) Get correct transit maps.
+6. Get correct transit maps.
 	* Go to the correct website for each carrier and get the transit map from your location.
 	* Save this file to the img/ directory.
 	* Update index.php to reflect the names of the images for each carrier.
@@ -60,7 +60,9 @@ In other words: it shows you how much to bill a customer for shipping packages.
 	* To view the exact rate you are charged by the carrier(s), add "?admin=poopstick" to the end of the URL.
 	* The page will change to notify you that you are in "admin" mode.
 * If you know that certain packages will set off an additional charge (oversized, not in cardboard box, etc.), you **must** manually adjust the js/script.js file to add the additional charge in.  Do so by taking the array index from `DEFAULT_PACKAGES` of the specific package and change the `if` statment as follows :
-	* ```js
+	* 
+
+	```
 	//CHECK IF ANY PACKAGES REQUIRE EXTRA HANDLING CHARGES
 	//ups/fedex don't add this charge since they don't know if a package isn't packed in cardboard
 	//show warning to user as a row in the table
