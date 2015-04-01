@@ -6,7 +6,7 @@ The intended use of this package is to get quotes to give to customers before pr
 
 In other words: it shows you how much to bill a customer for shipping packages.
 
-#Benefits Over Carrier's Websites:
+##Benefits Over Carrier's Websites:
 * Much more user friendly.
 * No need to type in account numbers or login information every time.
 * Quotes from multiple carriers at one time.  Easier to compare costs.
