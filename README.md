@@ -1,6 +1,6 @@
 #Small Package Freight Calculator
 
-This is a simple package that wraps around the [Easypost](www.easypost.com) API.  It gets freight quotes for any carrier you have enabled on Easypost and displays it in a table.
+This is a simple package that wraps around the [Easypost](http://www.easypost.com) API.  It gets freight quotes for any carrier you have enabled on Easypost and displays it in a table.
 
 The intended use of this package is to get quotes to give to customers before proceeding with submitting the shipment & scheduling a pickup via Easypost.
 
@@ -49,7 +49,7 @@ In other words: it shows you how much to bill a customer for shipping packages.
 		* `PERCENT_ADDITIONAL_CHARGE`: The percent margin on the freight charge you want to add to cover packaging & handling expenses.
 		* `MINIMUM_CHARGE`: The lowest freight rate you want to charge a customer.
 		* `DEFAULT_PACKAGES`: A list of the common packages you ship.  This is used to populate an HTML select with options of packages so users make less mistakes with dimensions.
-		
+
 6. Get correct transit maps.
 	* Go to the correct website for each carrier and get the transit map from your location.
 	* Save this file to the img/ directory.
@@ -69,10 +69,10 @@ In other words: it shows you how much to bill a customer for shipping packages.
 
 
 ##Additional Info
-* When viewing the page normally (ending in /freightcalc/), the rates shown in the Quotes table are adjusted to add the `PERCENT_ADDITIONAL_CHARGE` AND `MINIMUM_CHARGE`.
+* When viewing the page normally (ending in /freightcalc/), the rates shown in the Quotes table are adjusted to with the `PERCENT_ADDITIONAL_CHARGE` and `MINIMUM_CHARGE`.
 	* To view the exact rate you are charged by the carrier(s), add "?admin=poopstick" to the end of the URL.
 	* The page will change to notify you that you are in "admin" mode.
-* If you know that certain packages will set off an additional charge (oversized, not in cardboard box, etc.), you **must** manually adjust the js/script.js file to add the additional charge in.  Do so by taking the array index from `DEFAULT_PACKAGES` of the specific package and change the `if` statment as follows :
+* If you know that certain packages will set off an additional charge (oversized, not in cardboard box, etc.), you **must** manually adjust the js/script.js file to add the additional charge in.  Do so by taking the array index from `DEFAULT_PACKAGES` of the specific package and change the `if` statement to return "true" on the package's index :
 	* 
 
 	```
@@ -95,6 +95,6 @@ In other words: it shows you how much to bill a customer for shipping packages.
 * This project is in no way affiliated with or to Easypost.
 
 ##Packages used in this app:
-* [Easypost](www.easypost.com)
-* [jQuery](jquery.org)
-* [Bootstrap](getbootstrap.com)
+* [Easypost](http://www.easypost.com)
+* [jQuery](http://jquery.org)
+* [Bootstrap](http://getbootstrap.com)
