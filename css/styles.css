@@ -1,0 +1,51 @@
+/*OVERRIDE DEFAULT BOOSTRAP VALUES*/
+body, h1, h2,h3, h4, h5, h6, p, span {
+	font-family: 		'Roboto', sans-serif;
+	font-weight: 		300;
+}
+.btn {
+	font-weight: 		400;
+}
+hr {
+	border-top: 		1px solid #888;		/*not so dark*/
+}
+
+/*MAKE INPUTS SMALLER*/
+.package-size {
+	width: 				120px;
+}
+
+/*MAKE BUTTONS THE SAME HEIGHT AS INPUTS*/
+.package-add-remove-clone-btns .btn {
+	height:  			34px;
+}
+
+/*SHOW PACKAGE INPUTS ON SEPARATE LINES ON SMALL SCREENS*/
+@media (max-width: 995px) {
+	.package-inputs.form-group {
+		display: 		block;
+		margin-bottom:  10px;
+		text-align:  	left;
+		width: 			100%;
+	}
+	.package-inputs .input-group {
+		width: 			100%;
+	}
+	.package-inputs .input-group .input-group-addon {
+		width: 			20%;
+		text-align:  	left;
+	}
+	.package-inputs .input-group .form-control {
+		width: 			100%;
+	}
+
+	/*add, remove, clone buttons need to be centered instead of left aligned*/
+	.package-inputs:last-child {
+		text-align:  	center;
+	}
+}
+
+/*MAKE TRANSIT MAPS BIGGER (FILL IN MODAL SIZE)*/
+.img-full-width {
+	width: 				100%;
+}
