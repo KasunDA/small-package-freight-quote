@@ -92,7 +92,7 @@ In other words: it shows you how much to bill a customer for shipping packages.
 	```
 
 ##Misc.
-* Bugs? Issues? File and [issue](https://github.com/coreymgilmore/small-package-freight-quote/issues/new).
+* Bugs? Issues? File and [issue](https://github.com/coreymgilmore/small-package-freight-quote/issues).
 * This project is in no way affiliated with or to Easypost.
 
 ##Packages used in this app:
